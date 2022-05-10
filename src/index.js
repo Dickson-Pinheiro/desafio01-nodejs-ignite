@@ -123,7 +123,6 @@ app.delete('/todos/:id', checksExistsUserAccount, (request, response) => {
   }
 
   const todoPosition = users[userPosition].todos.indexOf(todo)
-  console.log(users[userPosition].todos)
   users[userPosition].todos.splice(todoPosition, 1)
   return response.status(204).json()
 });
